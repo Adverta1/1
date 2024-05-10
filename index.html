@@ -64,21 +64,9 @@
       </section>
 </nav>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    function MobileTest(){
-        return navigator.maxTouchPoints > 0 && /Android|iPhone/i.test(navigator.userAgent);
-    }
-    if (MobileTest()) {
-        if (window.location.pathname !== "./Assets/mobile.html") {
-            window.location.href = "./Assets/mobile.html";
-        }
-    } else {
-      if (window.location.pathname !== "https://adverta1.github.io/1") {
-            window.location.href = "https://adverta1.github.io/1";
-        }
-    }
-});
-    </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
+function MobileTest(){
+    return navigator.maxTouchPoints > 0 && /Android|iPhone/i.test(navigator.userAgent);
+}
+if (MobileTest()) {
+    document.body.innerHTML = "";
+}
